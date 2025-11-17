@@ -1,0 +1,16 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "PokemonDataBuilder1", "PokemonDataBuilder1\PokemonDataBuilder1.csproj", "{F80A2614-DC17-4968-A2B8-3E2B33B1AD5D}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{F80A2614-DC17-4968-A2B8-3E2B33B1AD5D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{F80A2614-DC17-4968-A2B8-3E2B33B1AD5D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{F80A2614-DC17-4968-A2B8-3E2B33B1AD5D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{F80A2614-DC17-4968-A2B8-3E2B33B1AD5D}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal

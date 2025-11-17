@@ -1,0 +1,14 @@
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\bin\Debug\net9.0\PokemonDataBuilder1.exe
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\bin\Debug\net9.0\PokemonDataBuilder1.deps.json
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\bin\Debug\net9.0\PokemonDataBuilder1.runtimeconfig.json
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\bin\Debug\net9.0\PokemonDataBuilder1.dll
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\bin\Debug\net9.0\PokemonDataBuilder1.pdb
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.AssemblyInfoInputs.cache
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.AssemblyInfo.cs
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.csproj.CoreCompileInputs.cache
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.dll
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\refint\PokemonDataBuilder1.dll
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.pdb
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.genruntimeconfig.cache
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\ref\PokemonDataBuilder1.dll
