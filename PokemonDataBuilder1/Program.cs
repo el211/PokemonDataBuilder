@@ -52,7 +52,6 @@ class Program
             return;
         }
 
-        // clé = nom de l'attaque, valeur = AttackInfo avec Id, Name, Type, Power
         var attacksByName = new Dictionary<string, AttackInfo>(StringComparer.OrdinalIgnoreCase);
         int nextAttackId = 1;
 
@@ -92,9 +91,7 @@ class Program
                     attackIds.Add(atk.Id);
                 }
             }
-
-            // Si tu veux, tu peux limiter le nombre d’attaques par Pokémon :
-            // attackIds = attackIds.Take(6).ToList();
+            
 
             pokemonLines.Add($"{pokemonId},{entry.Name},{mappedType},{string.Join("|", attackIds)}");
             pokemonId++;
@@ -118,7 +115,6 @@ class Program
     }
 }
 
-// ---------- DTO classes ----------
 
 public class PokemonIndex
 {
