@@ -12,3 +12,4 @@ C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9
 C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.pdb
 C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.genruntimeconfig.cache
 C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\ref\PokemonDataBuilder1.dll
+C:\Users\PC\RiderProjects\PokemonDataBuilder1\PokemonDataBuilder1\obj\Debug\net9.0\PokemonDataBuilder1.sourcelink.json

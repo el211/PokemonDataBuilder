@@ -4,6 +4,7 @@ using System.IO;
 using System.Net.Http;
 using System.Text.Json;
 using System.Threading.Tasks;
+using System.Linq;
 
 class Program
 {
@@ -51,9 +52,12 @@ class Program
             return;
         }
 
-        var attacksDict = new Dictionary<string, AttackInfo>();
+        // clé = nom de l'attaque, valeur = AttackInfo avec Id, Name, Type, Power
+        var attacksByName = new Dictionary<string, AttackInfo>(StringComparer.OrdinalIgnoreCase);
+        int nextAttackId = 1;
+
         var pokemonLines = new List<string> { "id,name,type,attack_ids" };
-        int id = 1;
+        int pokemonId = 1;
 
         foreach (var entry in index.Results)
         {
@@ -73,41 +77,44 @@ class Program
                 {
                     string moveName = moveEntry.Move.Name;
 
-                    // Simplifié: on ne va pas encore chercher les vrais stats des attaques
-                    if (!attacksDict.ContainsKey(moveName))
+                    if (!attacksByName.TryGetValue(moveName, out var atk))
                     {
-                        attacksDict[moveName] = new AttackInfo
+                        atk = new AttackInfo
                         {
+                            Id = nextAttackId++,
                             Name = moveName,
                             Type = "Normal", // TODO: améliorer plus tard
                             Power = 50       // TODO: améliorer plus tard
                         };
+                        attacksByName[moveName] = atk;
                     }
 
-                    // ID stable simplifié: hash du nom
-                    attackIds.Add(moveName.GetHashCode());
+                    attackIds.Add(atk.Id);
                 }
             }
 
-            pokemonLines.Add($"{id},{entry.Name},{mappedType},{string.Join("|", attackIds)}");
-            id++;
+            // Si tu veux, tu peux limiter le nombre d’attaques par Pokémon :
+            // attackIds = attackIds.Take(6).ToList();
+
+            pokemonLines.Add($"{pokemonId},{entry.Name},{mappedType},{string.Join("|", attackIds)}");
+            pokemonId++;
         }
 
+        // Écrire pokemon.csv
         File.WriteAllLines(Path.Combine(OutputFolder, "pokemon.csv"), pokemonLines);
 
         Console.WriteLine("Saving attacks...");
-        var attackLines = new List<string> { "id,name,power,type" };
-        int atkId = 1;
 
-        foreach (var atk in attacksDict.Values)
+        var attackLines = new List<string> { "id,name,power,type" };
+
+        foreach (var atk in attacksByName.Values.OrderBy(a => a.Id))
         {
-            attackLines.Add($"{atkId},{atk.Name},{atk.Power},{atk.Type}");
-            atkId++;
+            attackLines.Add($"{atk.Id},{atk.Name},{atk.Power},{atk.Type}");
         }
 
         File.WriteAllLines(Path.Combine(OutputFolder, "attacks.csv"), attackLines);
 
-        Console.WriteLine("Done! All Pokémon downloaded.");
+        Console.WriteLine("Done! All Pokémon + attacks saved.");
     }
 }
 
@@ -152,7 +159,8 @@ public class MoveName
 
 public class AttackInfo
 {
-    public string Name { get; set; }
+    public int    Id    { get; set; }
+    public string Name  { get; set; }
     public int    Power { get; set; }
     public string Type  { get; set; }
 }
